@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 const Confirmation: React.FC = () => {
   interface PersonalDetailsData {
@@ -26,12 +26,14 @@ const Confirmation: React.FC = () => {
     : { date: '', time: '' };
 
   return (
-    <Container>
+    <Box style={{width:'100vw',display:'flex',justifyContent:'center', alignItems:"center"}}>
       <Typography>
-        Hi {personalDetails.name}, your booking is scheduled at {bookingDetails.time} on {bookingDetails.date}.<br />
+        <pre>
+          Hi {personalDetails.name}, your booking is scheduled at {bookingDetails.time} on {bookingDetails.date}.<br />
         Thanks!!
+        </pre>
       </Typography>
-    </Container>
+    </Box>
   );
 }
 

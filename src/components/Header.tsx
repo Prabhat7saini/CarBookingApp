@@ -1,9 +1,17 @@
 import { Box} from '@mui/material'
-import React from 'react'
+
 
 const Header = () => {
   return (
-    <Box  display='flex' flexDirection='column' alignItems={"center"} justifyContent={"center"} paddingX='3rem'  maxWidth="sm" > 
+    <Box 
+    style={{
+      width: '100vw',
+      
+  }}
+  display='flex' flexDirection='column' alignItems={"center"} 
+  justifyContent={"center"}  
+    
+    > 
       <h1>Welcome To Carbooking </h1>
     </Box>
   )

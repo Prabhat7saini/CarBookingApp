@@ -38,68 +38,75 @@ const PersonalDetails: React.FC = () => {
     return (
         <Container  >
             <form onSubmit={handleSubmit(onSubmitaction)}>
-                <Box display='flex' flexDirection='column' paddingX='1rem' >
+                <Box style={{
+                    width: '100vw', display: 'flex', justifyContent: 'center',
+                    alignItems: "center"
+                }}>
+                    <Box style={{
+                        width: '15rem', display: 'flex', flexDirection: 'column'
+                    }}>
 
-                    <Controller
-                        name="name"
-                        control={control}
-                        render={({ field }) => (
-                            <TextField {...field}
-                                type='text'
-                                label="Name"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                            />
-                        )}
-                    ></Controller>
-                    {errors.name?.message && <p>{errors.name?.message}</p>}
-                    <Controller
-                        name="email"
-                        control={control}
-                        render={({ field }) => (
-                            <TextField {...field}
-                                type='email'
-                                label="Email"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                            />
-                        )}
-                    ></Controller>
-                    {errors.email?.message && <p>{errors.email?.message}</p>}
-                    <Controller
-                        name="Phoneno"
-                        control={control}
-                        render={({ field }) => (
-                            <TextField {...field}
-                                //    type='number'
-                                type='text'
-                                label="Phoneno"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                                 />
-                        )}
-                    ></Controller>
-                    {errors.Phoneno?.message && <p>{errors.Phoneno?.message}</p>}
-                    <Controller
-                        name="address"
-                        control={control}
-                        render={({ field }) => (
-                            <TextField {...field}
-                                type='text'
-                                label="address"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
+                        <Controller
+                            name="name"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField {...field}
+                                    type='text'
+                                    label="Name"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
                                 />
-                        )}
-                    ></Controller>
-                    {errors.address?.message && <p>{errors.address?.message}</p>}
-                    
+                            )}
+                        ></Controller>
+                        {errors.name?.message && <p>{errors.name?.message}</p>}
+                        <Controller
+                            name="email"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField {...field}
+                                    type='email'
+                                    label="Email"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
+                                />
+                            )}
+                        ></Controller>
+                        {errors.email?.message && <p>{errors.email?.message}</p>}
+                        <Controller
+                            name="Phoneno"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField {...field}
+                                    //    type='number'
+                                    type='text'
+                                    label="Phoneno"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
+                                />
+                            )}
+                        ></Controller>
+                        {errors.Phoneno?.message && <p>{errors.Phoneno?.message}</p>}
+                        <Controller
+                            name="address"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField {...field}
+                                    type='text'
+                                    label="address"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
+                                />
+                            )}
+                        ></Controller>
+                        {errors.address?.message && <p>{errors.address?.message}</p>}
+
+                <Button type='submit' variant='outlined' style={{width:"5rem"}}>Next</Button>
+                    </Box>
                 </Box>
-                <Button type='submit' >Next</Button>
             </form>
         </Container>
     )

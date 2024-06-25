@@ -30,37 +30,43 @@ const BookingDetails: React.FC = () => {
   }
   return (
     <form onSubmit={handleSubmit(onSubmitaction)}>
-      <Box display='flex' flexDirection='column'
-        alignItems={"center"} justifyContent={"center"}
-        paddingX='3rem' maxWidth="sm">
-        <Controller
-          name="date"
-          control={control}
-          render={({ field }) => (
-            <TextField {...field}
-              type='date'
-              // label="Name"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              helperText={errors.date ? errors.date.message : null} />
-          )}
-        ></Controller>
-           <Controller
-          name="time"
-          control={control}
-          render={({ field }) => (
-            <TextField {...field}
-              type='time'
-              // label="Name"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              helperText={errors.time ? errors.time.message : null} />
-          )}
-        ></Controller>
-        
-        <Button type='submit' >Book</Button>
+
+      <Box style={{
+        width: '100vw', display: 'flex', justifyContent: 'center',
+        alignItems: "center"
+      }}>
+        <Box style={{
+          width: '15rem', display: 'flex',  flexDirection: 'column'
+        }}>
+          <Controller
+            name="date"
+            control={control}
+            render={({ field }) => (
+              <TextField {...field}
+                type='date'
+                // label="Name"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                helperText={errors.date ? errors.date.message : null} />
+            )}
+          ></Controller>
+          <Controller
+            name="time"
+            control={control}
+            render={({ field }) => (
+              <TextField {...field}
+                type='time'
+                // label="Name"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                helperText={errors.time ? errors.time.message : null} />
+            )}
+          ></Controller>
+
+          <Button type='submit' >Book</Button>
+        </Box>
       </Box>
     </form>
   )
