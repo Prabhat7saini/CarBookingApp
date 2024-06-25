@@ -1,18 +1,8 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
-
+import { Box,  Typography } from '@mui/material';
+import { PersonalDetailsData ,BookDetailsData} from '../utils/interface';
 const Confirmation: React.FC = () => {
-  interface PersonalDetailsData {
-    name: string,
-    email: string,
-    Phoneno: number,
-    address: string
-  }
 
-  interface BookDetailsData {
-    date: string,
-    time: string
-  }
 
   const extractPersonalDetails: string | null = localStorage.getItem('PerSonalDetails');
   const extractBookingDetails: string | null = localStorage.getItem('BookingDetails');

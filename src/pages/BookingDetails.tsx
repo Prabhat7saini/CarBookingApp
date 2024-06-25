@@ -4,12 +4,10 @@ import { Box, TextField } from "@mui/material"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
+import { BookDetailsData } from "../utils/interface";
 const BookingDetails: React.FC = () => {
 
-  interface BookDetailsData {
-    date: string,
-    time: string
-  }
+  
   const navigate = useNavigate();
   const {
     control,

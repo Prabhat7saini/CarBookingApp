@@ -8,13 +8,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 // import * as yup from "yup"
 import { PersonalDetailsSchema } from '../schema';
 import { useNavigate } from 'react-router-dom';
+import { PersonalDetailsData } from '../utils/interface';
 const PersonalDetails: React.FC = () => {
-    interface PersonalDetailsData {
-        name: string,
-        email: string,
-        Phoneno: string,
-        address: string
-    }
+   
     const navigate = useNavigate();
     const {
         control,

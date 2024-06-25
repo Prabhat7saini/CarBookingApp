@@ -6,14 +6,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { VehicleDetailsSchema } from '../schema/VehicleDetailsSchema';
 import { TextField, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
+import { VehicleDetailsData } from '../utils/interface';
 
 export default function ServiceDetails() {
-    interface VehicleDetailsData {
-        vehicle_Type: string,
-        vehicleModelNo: string,
-
-    }
+   
     const navigate = useNavigate();
 
     const options = ['Car', 'Bike', 'Truck'];
